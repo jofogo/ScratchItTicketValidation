@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/lblServer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_gap"
+        android:layout_marginRight="@dimen/default_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/settings_lblserver"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtServer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/settings_txtserver"
+        android:inputType="textUri"
+        app:layout_constraintLeft_toLeftOf="@+id/lblServer"
+        app:layout_constraintRight_toRightOf="@+id/lblServer"
+        app:layout_constraintTop_toBottomOf="@+id/lblServer" />
+
+    <TextView
+        android:id="@+id/lblLicense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/settings_lbllicense"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/txtServer"
+        app:layout_constraintRight_toRightOf="@+id/txtServer"
+        app:layout_constraintTop_toBottomOf="@+id/txtServer" />
+
+    <EditText
+        android:id="@+id/txtLicense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="@string/settings_txtlicense"
+        app:layout_constraintLeft_toLeftOf="@+id/lblLicense"
+        app:layout_constraintRight_toRightOf="@+id/lblLicense"
+        app:layout_constraintTop_toBottomOf="@+id/lblLicense" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:background="@color/scratchit_green"
+        android:text="@string/settings_btnsave"
+        android:textColor="@color/textDim"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLicense"
+        app:layout_constraintRight_toRightOf="@+id/txtLicense"
+        app:layout_constraintTop_toBottomOf="@+id/txtLicense" />
+</android.support.constraint.ConstraintLayout>
