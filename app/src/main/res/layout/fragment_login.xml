@@ -1,87 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    tools:context=".Login">
+    tools:context=".Login"
+    tools:layout_editor_absoluteY="81dp">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="false"
-        android:layout_centerInParent="false"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="@dimen/default_gap"
-        android:src="@drawable/logo_scratchit" />
+        android:paddingLeft="@dimen/default_gap"
+        android:paddingRight="@dimen/default_gap"
+        android:src="@drawable/logo_scratchit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView6"
-        android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
-        android:layout_toStartOf="@+id/imageView6"
-        android:src="@drawable/ico_user" />
+        android:src="@drawable/ico_user"
+        app:layout_constraintLeft_toLeftOf="@+id/imgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
     <EditText
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView6"
-        android:layout_alignBottom="@+id/imgUser"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_toRightOf="@+id/imgUser"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/login_txtusername"
         android:inputType="textPersonName"
-        android:maxLength="20" />
+        android:maxLength="20"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+        app:layout_constraintLeft_toRightOf="@+id/imgUser" />
 
     <ImageView
         android:id="@+id/imgPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgUser"
-        android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
-        android:layout_toLeftOf="@+id/imageView6"
-        android:src="@drawable/ico_pass" />
+        android:src="@drawable/ico_pass"
+        app:layout_constraintLeft_toLeftOf="@+id/imgUser"
+        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
 
     <EditText
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUsername"
-        android:layout_alignBottom="@+id/imgPass"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_toRightOf="@+id/imgPass"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/login_txtpassword"
         android:inputType="textPassword"
-        android:maxLength="32" />
+        android:maxLength="32"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPass"
+        app:layout_constraintLeft_toRightOf="@+id/imgPass" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPassword"
-        android:layout_alignStart="@+id/txtPassword"
-        android:layout_alignEnd="@+id/txtPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:layout_marginTop="@dimen/default_gap"
         android:enabled="false"
         android:foreground="@color/scratchit_green"
         android:text="@string/login_btnlogin"
-        android:textColor="@color/textDim" />
+        android:textColor="@color/textDim"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/imgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgPass" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
