@@ -1,98 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/text_white"
+    android:background="@android:color/background_light"
     tools:context=".Login">
 
     <!-- TODO: Update blank fragment layout -->
+
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_scratchit" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/default_gap"
+        android:src="@drawable/logo_scratchit" />
 
-    <android.support.v7.widget.GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:alignmentMode="alignMargins"
-        app:columnCount="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-        app:layout_constraintVertical_bias="0.0"
-        app:rowCount="2">
+        android:layout_below="@+id/imageView6"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_toStartOf="@+id/imageView6"
+        android:src="@drawable/ico_user" />
 
-        <ImageView
-            android:id="@+id/imgUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:srcCompat="@drawable/ico_user" />
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignBottom="@+id/imgUser"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_toRightOf="@+id/imgUser"
+        android:ems="10"
+        android:hint="@string/login_txtusername"
+        android:inputType="textPersonName"
+        android:maxLength="20" />
 
-        <ImageView
-            android:id="@+id/imgPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            app:layout_column="0"
-            app:layout_row="1"
-            app:srcCompat="@drawable/ico_pass" />
+    <ImageView
+        android:id="@+id/imgPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgUser"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:src="@drawable/ico_pass" />
 
-        <EditText
-            android:id="@+id/txtUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/login_txtusername"
-            android:inputType="textPersonName"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_gravity="center_vertical"
-            app:layout_row="0" />
-
-        <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/login_txtpassword"
-            android:inputType="textPassword"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_gravity="center_vertical"
-            app:layout_row="1" />
-
-    </android.support.v7.widget.GridLayout>
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsername"
+        android:layout_alignBottom="@+id/imgPass"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_toRightOf="@+id/imgPass"
+        android:ems="10"
+        android:hint="@string/login_txtpassword"
+        android:inputType="textPassword"
+        android:maxLength="32" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtPassword"
+        android:layout_alignEnd="@+id/txtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/default_gap"
         android:enabled="false"
+        android:foreground="@color/scratchit_green"
         android:text="@string/login_btnlogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
-</android.support.constraint.ConstraintLayout>
+        android:textColor="@color/textDim" />
+
+</RelativeLayout>
